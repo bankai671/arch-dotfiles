@@ -1,0 +1,24 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+  {
+    "key": "ctrl+n",
+    "command": "explorer.newFile"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "explorer.newFolder"
+  },
+  {
+    "key": "shift+alt+f",
+    "when": "editorFocus",
+    "command": "prettier.forceFormatDocument"
+  },
+  {
+    "key": "ctrl+alt+down",
+    "command": "editor.action.copyLinesDownAction"
+  },
+  {
+    "key": "ctrl+alt+up",
+    "command": "editor.action.copyLinesUpAction"
+  },
+]
