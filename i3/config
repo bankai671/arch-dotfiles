@@ -26,7 +26,8 @@ default_floating_border none
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
-
+# Disable DPMS and prevent screen from blanking
+exec --no-startup-id xset s off -dpms
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
@@ -205,11 +206,12 @@ exec_always "setxkbmap -model pc104 -layout us,ru,ua -variant ,, -option grp:win
 
 #screenshot
 bindsym Print exec scrot ~/stuff/screenshots/%Y-%m-%d-%T-screenshot.png
-bindsym --release Shift+Print exec scrot ~/stuff/screenshots/%Y-%m-%d-%T-screenshot.png --select --line mode=edge
-
+#bindsym --release Shift+Print exec scrot ~/stuff/screenshots/%Y-%m-%d-%T-screenshot.png --select --line mode=edge
+bindsym --release Shift+Print exec scrot -s -l mode=edge "$HOME/stuff/screenshots/%Y-%m-%d-%T-screenshot.png" -e 'xclip -selection clipboard -t image/png $f'
 #screen brightnesses
 bindsym XF86MonBrightnessUp exec light -q -A 10
 bindsym XF86MonBrightnessDown exec light -q -U 10
 
 #remove all window borders
 for_window [all] border pixel 0
+
