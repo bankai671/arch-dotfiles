@@ -205,8 +205,7 @@ exec_always --no-startup-id feh --bg-scale --zoom fill ~/stuff/wallpapers/lain.p
 exec_always "setxkbmap -model pc104 -layout us,ru,ua -variant ,, -option grp:win_space_toggle"
 
 #screenshot
-bindsym Print exec scrot ~/stuff/screenshots/%Y-%m-%d-%T-screenshot.png
-#bindsym --release Shift+Print exec scrot ~/stuff/screenshots/%Y-%m-%d-%T-screenshot.png --select --line mode=edge
+bindsym Print exec scrot ~/stuff/screenshots/%Y-%m-%d-%T-screenshot.png -e 'xclip -selection clipboard -t image/png $f'
 bindsym --release Shift+Print exec scrot -s -l mode=edge "$HOME/stuff/screenshots/%Y-%m-%d-%T-screenshot.png" -e 'xclip -selection clipboard -t image/png $f'
 #screen brightnesses
 bindsym XF86MonBrightnessUp exec light -q -A 10
