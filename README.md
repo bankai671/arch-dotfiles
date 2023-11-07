@@ -1,2 +1,2 @@
 # dotfiles
-bankai671 dotfiles
+bankai671 dotfiles.
