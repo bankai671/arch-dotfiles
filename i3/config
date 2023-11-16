@@ -39,7 +39,6 @@ exec --no-startup-id xset s off -dpms
 exec --no-startup-id nm-applet
 
 exec --no-startup-id xrandr --output eDP-1 --mode 1920x1080 --rate 60.00
-exec --no-startup-id xrandr --setprovideroutputsource modesetting NVIDIA-0
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
