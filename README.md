@@ -1,2 +1,2 @@
-# dotfiles
-bankai671 dotfiles.
+# Dotfiles
+My arch linux dotfiles and configurations.
